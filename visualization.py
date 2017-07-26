@@ -37,7 +37,7 @@ class Visualization(object):
         axes.plot(np.arange(len(cost_list))*self.printing, cost_list, color='red', lw=2, alpha=0.4)
         axes.scatter(np.arange(len(cost_list))*self.printing, cost_list, color='black', alpha=0.9)
         axes.set_xlabel('Epoch')
-        axes.set_ylabel('Cost')
+        axes.set_ylabel('ELBO')
         axes.grid(alpha=0.09, color='grey')
         plt.tight_layout()
         
