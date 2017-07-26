@@ -10,6 +10,18 @@ from bokeh.io import push_notebook, show, output_notebook
 from bokeh.layouts import gridplot, row
 
 
+import numpy as np
+import tensorflow as tf
+import matplotlib.pyplot as plt
+from tensorflow.contrib.learn.python.learn.datasets.mnist import read_data_sets
+from IPython.display import display, Math, Latex, HTML
+from ipywidgets import interact, IntSlider, interactive
+from bokeh.plotting import figure, show
+from bokeh.models import ColumnDataSource, Title
+from bokeh.io import push_notebook, show, output_notebook
+from bokeh.layouts import gridplot, row
+
+
 class Visualization(object):
     def __init__(self, total_epoch, batch_size, printing):
         #This is the visualazation library used for this notebook
@@ -18,7 +30,6 @@ class Visualization(object):
         self.printing=printing
     
     def plotting_cost(self, cost_list):
-
         '''
         Function plots cost
         
@@ -143,7 +154,10 @@ class Visualization(object):
         '''
         
         x_reshaped=np.array(reconstruction).reshape(self.total_epoch//self.printing, self.batch_size, 28, 28)
+        x_reshaped = x_reshaped[:,:,::-1]
+        
         x_true=true_x[:self.batch_size].reshape(self.batch_size, 28, 28)
+        x_true= x_true[:,::-1]
         
         custum_blue=['#ffffff','#f0f0f0','#d9d9d9', '#a6bddb','#74a9cf','#3690c0','#0570b0','#045a8d','#023858']
         custum_grey=['#ffffff','#f0f0f0','#d9d9d9','#bdbdbd','#969696','#737373','#525252','#252525', '#000000']
