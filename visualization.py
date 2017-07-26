@@ -9,6 +9,7 @@ from bokeh.models import ColumnDataSource, Title
 from bokeh.io import push_notebook, show, output_notebook
 from bokeh.layouts import gridplot, row
 
+
 class Visualization(object):
     def __init__(self, total_epoch, batch_size, printing):
         #This is the visualazation library used for this notebook
@@ -235,7 +236,7 @@ class Visualization(object):
         left_x, right_x, top_y, bottom_y: dimensiopn of the box that are used for sampling
 
         '''
-        
+     
         cell_x = cell_y = 30
         canvas_width=img_size*cell_x
         canvas_hight=img_size*cell_y
