@@ -10,17 +10,6 @@ from bokeh.io import push_notebook, show, output_notebook
 from bokeh.layouts import gridplot, row
 
 
-import numpy as np
-import tensorflow as tf
-import matplotlib.pyplot as plt
-from tensorflow.contrib.learn.python.learn.datasets.mnist import read_data_sets
-from IPython.display import display, Math, Latex, HTML
-from ipywidgets import interact, IntSlider, interactive
-from bokeh.plotting import figure, show
-from bokeh.models import ColumnDataSource, Title
-from bokeh.io import push_notebook, show, output_notebook
-from bokeh.layouts import gridplot, row
-
 
 class Visualization(object):
     def __init__(self, total_epoch, batch_size, printing):
