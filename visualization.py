@@ -9,8 +9,6 @@ from bokeh.models import ColumnDataSource, Title
 from bokeh.io import push_notebook, show, output_notebook
 from bokeh.layouts import gridplot, row
 
-
-
 class Visualization(object):
     def __init__(self, total_epoch, batch_size, printing):
         #This is the visualazation library used for this notebook
