@@ -3,7 +3,7 @@ FROM jupyter/scipy-notebook
 WORKDIR /srv/jupyter
 
 # add dir contents
-ADD . /srv/jupyterhub
+ADD . /srv/jupyter
 
 RUN pip install -r requirements.txt
 
