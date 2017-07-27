@@ -1,5 +1,7 @@
 FROM jupyter/scipy-notebook
 
+USER root
+
 WORKDIR /srv/jupyter
 
 # add dir contents
