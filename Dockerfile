@@ -14,6 +14,6 @@ WORKDIR /srv/jupyter/notebooks
 # sign notebooks
 RUN jupyter trust *.ipynb
 
-EXPOSE 8888
+#EXPOSE 8888
 
-CMD jupyter notebook --no-browser --port=8888 --allow-root
+#CMD jupyter notebook --no-browser --port=8888 --allow-root
