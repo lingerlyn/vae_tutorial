@@ -14,7 +14,7 @@ RUN pip install -r requirements.txt
 WORKDIR notebooks
 
 # give notebook user permission
-RUN chown -r $NB_USER .
+RUN chown -R $NB_USER .
 
 USER $NB_USER
 
