@@ -2,14 +2,14 @@ FROM jupyter/scipy-notebook
 
 USER root
 
-WORKDIR /srv/jupyter
+WORKDIR $HOME
 
 # add dir contents
-ADD . /srv/jupyter
+ADD . $HOME
 
 RUN pip install -r requirements.txt
 
-WORKDIR /srv/jupyter/notebooks
+WORKDIR notebooks
 
 # sign notebooks
 RUN jupyter trust *.ipynb
