@@ -1,15 +1,19 @@
 FROM jupyter/scipy-notebook
 
-USER root
+USER $NB_USER
 
 WORKDIR $HOME
 
 # add dir contents
 ADD . $HOME
 
+USER root
+
 RUN pip install -r requirements.txt
 
 WORKDIR notebooks
+
+USER $NB_USER
 
 # sign notebooks
 RUN jupyter trust *.ipynb
